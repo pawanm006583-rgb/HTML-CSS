@@ -1,0 +1,32 @@
+/* dev{
+    background-color: blueviolet;
+    color: blueviolet;
+}
+
+h1{
+    background-color: bisque;
+    width: 200px;
+    border-color: black;
+}
+
+button{
+    background-color: aqua;
+    border-radius: 20px;
+    border-color: black;
+    
+} */
+
+*{
+    align-items: center;
+    text-align: center;
+    box-shadow: 5px 5px 10px rgb(2, 75, 104);
+    border-color: blueviolet;
+    text-decoration: aqua;
+    background-color: rgba(15, 209, 170, 0.48);
+    
+
+}
+
+#table{
+    align-items: center;
+}

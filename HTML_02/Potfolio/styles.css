@@ -1,0 +1,155 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+
+body {
+    background-color: #CAD2C5;
+    color: #2F3E46;
+    text-align: center;
+}
+
+
+.marquee {
+    background-color: #354F52;
+    color: #ffffff;
+    padding: 15px 0;
+    font-size: 22px;
+    font-weight: 600;
+    overflow: hidden;
+}
+
+.marquee span {
+    display: inline-block;
+    animation: scroll 10s linear infinite;
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.mainbox {
+    margin-top: 40px;
+}
+
+.box img {
+    width: 260px;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 6px solid #52796F;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+    transition: 0.4s ease;
+}
+
+.box img:hover {
+    transform: scale(1.05);
+}
+
+p {
+    margin-top: 20px;
+    font-size: 28px;
+    font-weight: 600;
+    color: #354F52;
+}
+
+h2 {
+    margin-top: 50px;
+    margin-bottom: 15px;
+    font-size: 25px;
+    color: #ffffff;
+    background-color: #52796F;
+    padding: 5px;
+    
+}
+
+.about {
+    max-width: 550px;
+    margin: auto;
+    background-color: #84A98C;
+    padding: 35px;
+    border-radius: 20px;
+    font-size: 15px;
+    line-height: 1.4;
+    color: #ffffff;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+
+.form-container {
+    margin: 60px auto;
+    max-width: 500px;
+    background-color: #52796F;
+    padding: 40px;
+    border-radius: 25px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+    color: white;
+}
+
+.form-container h2 {
+    margin-bottom: 25px;
+    color: #ffffff;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 500;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+}
+
+
+.form-group button {
+    width: 100%;
+    padding: 14px;
+    background-color: #2F3E46;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.form-group button:hover {
+    background-color: #354F52;
+    transform: translateY(-2px);
+}
+
+
+@media (max-width: 600px) {
+    .about {
+        margin: 20px;
+        font-size: 16px;
+    }
+
+    .box img {
+        width: 200px;
+        height: 200px;
+    }
+}

@@ -1,0 +1,155 @@
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+    }
+
+    body {
+    background: #f5fbff;
+    }
+
+    /* Navbar */
+    .navbar {
+    background: linear-gradient(to right, #0c2b4a, #1d4f8f);
+    padding: 16px 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    }
+
+    .logo {
+    font-size: 26px;
+    font-weight: bold;
+    font-style: italic;
+    }
+
+    nav a {
+    margin-left: 30px;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding-bottom: 4px;
+    }
+
+    nav a.active {
+    border-bottom: 2px solid #3cc3ff;
+    }
+
+    /* Hero */
+    .hero {
+    height: 85vh;
+    background: url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e") center/cover no-repeat;
+    position: relative;
+    }
+
+    .hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.6));
+    }
+
+    .hero-content {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    }
+
+    .hero h1 {
+    font-size: 60px;
+    margin-bottom: 10px;
+    font-style: italic;
+    }
+
+    .hero p {
+    font-size: 22px;
+    margin-bottom: 20px;
+    }
+
+    .hero button {
+    padding: 12px 32px;
+    background: #12b5cb;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 18px;
+    cursor: pointer;
+    }
+
+    /* About */
+    .about {
+    background: white;
+    padding: 70px 20px;
+    text-align: center;
+    }
+
+    .about h2 {
+    font-size: 34px;
+    color: #174c86;
+    margin-bottom: 15px;
+    }
+
+    .about p {
+    font-size: 18px;
+    color: #555;
+    }
+
+    /* Courses */
+    .courses {
+    padding: 70px 60px;
+    text-align: center;
+    }
+
+    .courses h2 {
+    font-size: 34px;
+    color: #174c86;
+    margin-bottom: 40px;
+    }
+
+    .cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    }
+
+    .card {
+    background: white;
+    width: 300px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    }
+
+    .card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    }
+
+    .card h3 {
+    padding: 15px;
+    font-size: 18px;
+    }
+
+    /* Bottom Image */
+    .bottom-image {
+    height: 300px;
+    background: url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee") center/cover no-repeat;
+    }
+
+    /* Footer */
+    footer {
+    background: #0c2b4a;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+    }  

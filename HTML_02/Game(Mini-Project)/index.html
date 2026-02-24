@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NITRO RUSH - Arcade Racer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <input type="checkbox" id="start" class="si">
+    <input type="radio" name="lane" id="lane-1" class="si">
+    <input type="radio" name="lane" id="lane-2" class="si" checked>
+    <input type="radio" name="lane" id="lane-3" class="si">
+
+    <div class="screen start-screen">
+        <div class="start-bg"></div>
+        <div class="start-content">
+            <div class="logo">
+                <span class="ln">NITRO</span>
+                <span class="lr">RUSH</span>
+            </div>
+            <p class="tagline">ARCADE RACER</p>
+            <label for="start" class="btn-start">▶ INSERT COIN</label>
+            <div class="how">
+                <p>◀ ▶ ARROW KEYS OR CLICK LANES</p>
+                <p>DODGE THE TRAFFIC!</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="screen game-screen">
+        <div class="scanlines"></div>
+
+        <div class="grass grass-l">
+            <div class="gs"></div>
+            <div class="tree t1"></div>
+            <div class="tree t2"></div>
+            <div class="tree t3"></div>
+            <div class="tree t4"></div>
+            <div class="tree t5"></div>
+            <div class="tree t6"></div>
+        </div>
+
+        <div class="road">
+            <div class="road-edge el"></div>
+            <div class="road-edge er"></div>
+            <div class="lane-line ll1"></div>
+            <div class="lane-line ll2"></div>
+
+            <label for="lane-1" class="zone z1"></label>
+            <label for="lane-2" class="zone z2"></label>
+            <label for="lane-3" class="zone z3"></label>
+
+            <div class="pcar">
+                <div class="pw"></div>
+                <div class="pe"></div>
+            </div>
+
+            <div class="ecar ec1"></div>
+            <div class="ecar ec2"></div>
+            <div class="ecar ec3"></div>
+            <div class="ecar ec4"></div>
+            <div class="ecar ec5"></div>
+            <div class="ecar ec6"></div>
+            <div class="ecar ec7"></div>
+            <div class="ecar ec8"></div>
+            <div class="ecar ec9"></div>
+        </div>
+
+        <div class="grass grass-r">
+            <div class="gs"></div>
+            <div class="tree t1"></div>
+            <div class="tree t2"></div>
+            <div class="tree t3"></div>
+            <div class="tree t4"></div>
+            <div class="tree t5"></div>
+            <div class="tree t6"></div>
+        </div>
+
+        <div class="hud">
+            <div class="hud-box">
+                <span class="hl">SPD</span>
+                <div class="bar">
+                    <div class="sfill"></div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="controls">
+            <label for="lane-1" class="cb">◀</label>
+            <label for="lane-2" class="cb">▼</label>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('start').onchange = function () {
+            if (!this.checked) return;
+            var i = setInterval(function () { var p = document.querySelector('.pcar').getBoundingClientRect(); var c = document.querySelectorAll('.ecar'); for (var j = 0; j < c.length; j++) { var r = c[j].getBoundingClientRect(); if (p.left + 8 < r.right && p.right - 8 > r.left && p.top + 8 < r.bottom && p.bottom - 8 > r.top) { clearInterval(i); location.href = 'gameover.html'; } } }, 30);
+        };
+    </script>
+</body>
+
+</html>
